@@ -16,9 +16,10 @@ body {
     flex-direction: column;
 }
 
-h1 {
+h2 {
     color: rgb(26, 32, 44);
     line-height: 1.25;
+    font-size: 48px;
 }
 
 p {
@@ -27,16 +28,26 @@ p {
     color: rgb(36, 62, 99);
 }
 
+.purple {
+    color: #6415ff;
+}
+
 /*NAVIGATION*/
 
+#navigation {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .nav__row {
+    width: 100%;
+    max-width: 1200px; 
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1200px;    
+    box-sizing: border-box;       
 }
 
 .nav__logo {
@@ -98,18 +109,24 @@ p {
     border-radius: 40px;
 }
 
+/*HEADER*/
+
 .header {
     width: 100%;
     max-width: 1200px;
-    padding: 0;
+    margin:0 auto;
+    padding: 0 16px;
     display: flex;
+    box-sizing: border-box;
 }
 
 .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    width: 100%;    
-    padding: 0;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .row {
@@ -118,22 +135,21 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 h1 {
+    color: rgb(26, 32, 44);
+    line-height: 1.25;
+    font-size: 40px;
     margin-top: 16px;
-    margin-bottom: 48px;
-    text-align: left;
-    font-size: 48px;
+    margin-bottom: 24px;
+    text-align: left;   
 }
 
 .header__description--para {
     margin-top: 32px;
     margin-bottom: 32px;
-}
-
-.purple {
-    color: #6415ff;
 }
 
 .header__description {
@@ -144,18 +160,34 @@ h1 {
 }
 
 .header__email {
-    border: solid 2px rgb(215, 212, 212);
-    height: 80px;
-    width: 100%;
-    margin-top: 16px;
-    margin-bottom: 64px;
-    border-radius: 200px;
-    padding: 20px;
-    display: flex;
+    display:flex;
+    flex-direction: row;
     justify-content: space-between;
+    border: solid 2px rgb(215, 212, 212);
+    border-radius: 200px;
+    height: 80px;
     align-items: center;
-    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header__email--input {
+    margin-left: 16px;
+    border: none;
+    font-size: 16px;    
   } 
+
+  .header__email--btn {
+   width: 40%;
+   height: 70%;
+   margin-right: 8px;
+   border-radius: 200px;
+   border: none;
+   background-color: #6415ff;
+   color: white;
+   font-size: 16px;
+   
+  }
 
 .customer__title {
     color: rgb(160, 174, 192);
@@ -189,14 +221,19 @@ h1 {
 #features {
     width:100%;
     max-width: 1200;
-    padding: 24px;
-    margin: 32px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .features__heading {
-    padding: 0 auto;
-    margin-bottom: 36px;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
     text-align: center;
+    box-sizing: border-box;
 }
 
 .feature__heading {
@@ -216,9 +253,12 @@ h1 {
 }
 
 .features__row {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;    
 }
@@ -579,13 +619,22 @@ h1 {
 /*TESTIMONIALS*/
 
 #testimonials {
-    margin: 64px 24px;
+    width: 100%;
+    max-width:1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 .testimonials__container {
-    padding: 48px 48px;
+    width: 100%;
+    max-width:1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .testimonials__row {
+    width: 100%;
+    max-width:1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction:row-reverse;
     justify-content: space-between;
@@ -767,6 +816,13 @@ img {
 .link-white {
     color: white;
 }
+
+/*TABLETS */
+@media (max-width: 728px) {
+    
+}
+
+
 
 
 /*SMALL PHONES, LARGE SMARTPHONES */
