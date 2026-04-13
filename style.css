@@ -132,10 +132,16 @@ p {
     filter: invert (26%) sepia (94%) saturate(7476%) hue-rotate(261deg) brightness(94%) contrast(115%);
 }
 
-.modal {
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+}
+
+ .modal {
     position: fixed;
     top: 0;
-    left 0;
+    left: 0;
     right: 0;
     height: 378px;
     margin: 24px 16px;
@@ -144,11 +150,44 @@ p {
     border: 1px solid rgb(229, 231, 235);
     border-radius: 8px;
     z-index: 4;
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
     transform: translateX(300%);
     transition: all 300ms ease;
 }
+
+.modal__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.modal__link {
+    color: #1a202c;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.modal__link--primary {
+    color: #f7fafc;
+    padding: 12px 32px;
+    background: #6415ff;
+    border-radius: 500px;
+    border: none;
+}
+
+.menu--open .modal {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 /*HEADER*/
 
@@ -271,6 +310,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+    z-index: 1;
 }
 
 .customer__info--design {
@@ -548,6 +588,8 @@ h1 {
 
 .values__description {
     width: 60%;
+    display:flex;
+    flex-direction: column;
 }
 .values__description--heading {
     padding: 36px 0;
@@ -564,14 +606,18 @@ h1 {
 } 
 
 .values__points {
+    max-width: none;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 32px;
     gap: 24px;
 }
 
 .value__affordable--wrapper {
-    margin: 0 12px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .values__points--heading {
@@ -597,7 +643,9 @@ h1 {
  }
 
  .value__professionalism-wrapper {
-    margin: 0 12px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .prof__icon {
@@ -624,6 +672,8 @@ h1 {
 }
 
 .values__link--primary {
+    width: 30%;
+    text-align: center;
     margin-top: 40px;
     border: none;
     background-color: #6415ff;
@@ -1063,14 +1113,31 @@ i:hover .fas-brands {
     }
 }
 
-@media (max-width: 1280px) {
+@media(max-width: 1280px) {
     .btn__menu {
         display: block;
     }
 
     .nav__links {
-       display: none; 
+        display: none;
     }
+
+    .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 378px;
+    margin: 24px 16px;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    z-index: 4;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms ease;
 }
 
 @media(max-width: 1177px) {
@@ -1124,6 +1191,7 @@ i:hover .fas-brands {
         margin-bottom: 32px;
         margin-right: 0px;
         text-align: center;
+        width: 80%;
     }
 
     .work__image--wrapper {
@@ -1136,9 +1204,15 @@ i:hover .fas-brands {
         align-content: center;
     }
 
+    .steps__description {
+        width: 80%;
+        align-items: center;   
+     }
+
     .steps__title {
         text-align: center;
         font-size: 54px;
+        width: 100%;
     }
 
     h4 {
@@ -1177,6 +1251,21 @@ i:hover .fas-brands {
         margin-top: 64px;
     }
 
+    .features__heading {
+        width: 80%;
+    }
+
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .pricing__row {
+        width: 80%;
+        text-align: center;
+    }
     .feature__heading {
         font-size: 54px;
     }
@@ -1204,6 +1293,9 @@ i:hover .fas-brands {
         width: 250px;
     }
 
+    .testimonials__description {
+        text-align: center;
+    }
     .testimonials__description--heading {
         font-size: 54px;
     }
@@ -1216,7 +1308,16 @@ i:hover .fas-brands {
     }
 
     .testimony__image--wrapper {
-        width: 80%;
+        width: 70%;
+    }
+
+    .testimony__para {
+        text-align: center;
+        
+    }
+
+    .client__wrapper {
+        justify-content: flex-start;
     }
 
     .client__info {
@@ -1228,16 +1329,25 @@ i:hover .fas-brands {
         width: 150px;
     }
 
+    .banner__container {
+        display: flex;
+        justify-content: center;       
+    }
     .banner__row {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;           
+        text-align: center;
         align-content: center;
-        align-items: center;      
+        justify-content: space-between;
+        width: 70%; 
+        height: 100%;  
+        box-sizing: border-box;
     }
 
     .banner__copy {
        width: 80%; 
        text-align: center;
+       justify-content: center;
     }
 
     .bottom__buttons {
@@ -1257,20 +1367,69 @@ i:hover .fas-brands {
         width: 80%;
         text-align: center;
     }
+
+    h3 {
+        font-size: 20px;
+    }   
 }
 
-
  @media(max-width:965px) {
-    .pricing__row{
+    .pricing__row {
         display:flex;
         flex-direction: column;
         align-items: center;
         gap: 32px;
     }
+
+    .map__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;        
+ }
+
+    .links__row {
+        flex: 0 0 30%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        align-content: center;
+    }
+
+    .logo__row {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .name__wrapper {
+        margin-bottom: 24px;
+    }
+
+    .copyright__wrapper {
+        margin-bottom: 32px;
+    }
+
+    .socials__wrapper {
+        margin-top: 24px;
+    }
+
+    .values__description {
+        width: 80%;
+    }
+    .values__link--primary {
+        justify-content: center;
+        align-content: center;
+    }
+    
  }
 
 
 @media(max-width: 816px) {
+
+    .feature__heading {
+        font-size: 44px;
+    }
      .feature__para {
         font-size: 16px;
         line-height: .75cm;
@@ -1287,6 +1446,31 @@ i:hover .fas-brands {
      .feature__title {
         font-size: 24px;
     }
+
+    .client__name {
+        text-align: center;
+    }
+
+    .work__title {
+        font-size: 44px;
+    }
+
+    .steps__title {
+        font-size: 44px;
+    }
+
+    .values__description--heading {
+        font-size: 44px;
+    }
+
+    .testimonials__description--heading {
+        font-size: 44px;
+    }
+    .banner__text {
+        font-size: 40px;
+        width: 100%;
+    }
+    
 }
 
 
@@ -1320,6 +1504,30 @@ i:hover .fas-brands {
 
     .work__title {
         font-size: 40px;
+    }
+
+    .copyright__wrapper {
+        text-align: center;
+    }
+
+    .values__points {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 24px;
+    }
+    .values__points--para {
+        text-align: center;
+    }
+
+    .value__affordable--wrapper {
+        width: 50%;
+        text-align: center;
+    }
+
+    .value__professionalism--wrapper {
+       width: 50%;
+        text-align: center;
     }
 
 }

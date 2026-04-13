@@ -23,18 +23,19 @@
         <a href="#" class="nav__link">Login</a>
         <a href="#" class="nav__link nav__link--primary">Sign up</a>
       </div>
-
-      <button class="btn__menu" oneclick="openMenu()">
+      <button class="btn__menu" onclick="openMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="btn__menu--svg">
         <line x1="3" y1="12" x2="21" y2="12"></line>
         <line x1="3" y1="6" x2="21" y2="6"></line>
         <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
+        </svg>
       </button>
+      
+
       <div class="modal">
-        <button class="btn__menu btn__menu--close" oneclick="closeMenu()">
+        <button class="btn__menu btn__menu--close" onclick="closeMenu()">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           class="light__StyledCloseIcon-lj69nl-14 fASujc">
@@ -43,12 +44,12 @@
         </svg>
         </button>
         <div class="modal__links">
-          <a class="modal__link">About</a>
-          <a class="modal__link">About</a>
-          <a class="modal__link">About</a>
-          <a class="modal__link">About</a>
-          <a class="modal__link">About</a>
-          <a class="modal__link modal__link--primary">Sign Up</a>
+          <a href="#about" class="modal__link" onclick="closeMenu()">About</a>
+          <a href="#blog" class="modal__link" onclick="closeMenu()">Blog</a>
+          <a href="#pricing" class="modal__link" onclick="closeMenu()">Pricing</a>
+          <a href="#contact__us" class="modal__link" onclick="closeMenu()">Contact us</a>
+          <a href="#login" class="modal__link" onclick="closeMenu()">Login</a>
+          <a href="#sign__Up" class="modal__link modal__link--primary" onclick="closeMenu()">Sign Up</a>
         </div>
       </div>
     </div>
@@ -352,7 +353,7 @@
     <div class="banner__container">
       <div class="banner__row">
         <div class="banner__copy">
-          <h2>Developers all over the world are happily using Treact.</h2>
+          <h2 class="banner__text">Developers all over the world are happily using Treact.</h2>
         </div>
         <div class="bottom__buttons">
         <div class="button__primary">Get Started</div>
