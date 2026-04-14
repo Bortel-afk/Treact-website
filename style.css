@@ -1139,6 +1139,7 @@ i:hover .fas-brands {
     transform: translateX(0);
     transition: all 300ms ease;
 }
+}
 
 @media(max-width: 1177px) {
     .nav__row {
@@ -1232,6 +1233,7 @@ i:hover .fas-brands {
 
     .values__description {
         text-align: center;
+        align-items: center;
     }
 
     .values__description--heading {
