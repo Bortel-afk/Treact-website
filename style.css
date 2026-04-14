@@ -235,7 +235,7 @@ h1 {
 
 .header__description {
     width: 50%;
-    max-width: 588px
+    max-width: 588px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box; 
@@ -329,7 +329,7 @@ h1 {
 #features {
     width:100%;
     max-width: 1200;
-    margin: 0 auto;
+    margin-top: 64px;    
     box-sizing: border-box;
 }
 
@@ -367,8 +367,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-       
+    flex-wrap: wrap;       
 }
 
 .feature__row--card {
@@ -411,8 +410,13 @@ h1 {
 
 /*WORK*/
 
-.work__container {
+#work {
     margin-top: 64px;
+}
+.work__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .work__row {
@@ -494,13 +498,9 @@ h1 {
 
 #steps {
     padding: 0 32px;
-    margin: 64px 0;
+    margin: 96px 0;
+    box-sizing: border-box;
 }
-
-.steps__container {
-    padding: 96px 0;
-}
-
 
 .steps__row {
     display: flex;
